@@ -1,8 +1,9 @@
-def fibo(n):
-  a, b = 0, 1
-  for i in range(n):
-    print(a)
-    a, b = b, a + b
-
-numero = int(input("Digite o valor limite da sequência: "))
-fibo(numero)
+class Carro:
+    def __init__(self, marca, modelo, ano):
+        self.marca = marca
+        self.modelo = modelo
+        self.ano = ano
+    def detalhes(self):
+        return f"Marca: {self.marca}, Modelo: {self.modelo}, Ano: {self.ano}"
+carro = Carro('Ferrari', 'Portofino', '2023' )
+print(carro.detalhes())

@@ -1,7 +1,23 @@
-lista_de_numeros = [10, 20, 55, 1, 9]
+class ContaBancaria:
+    def __init__(self, saldo, titular):
+        self.saldo = saldo
+        self.titular = titular
 
-maior = max(lista_de_numeros)
-menor = min(lista_de_numeros)
+    def depositar(self, valor):
+        self.saldo += valor
+        return f"Depósito de {valor} realizado. Novo saldo: {self.saldo}"
 
-print(f"O maior valor é: {maior}")
-print(f"O menor valor é: {menor}")
+    def sacar(self, valor):
+        if valor <= self.saldo:
+            self.saldo -= valor
+            return f"Saque de {valor} realizado. Novo saldo: {self.saldo}"
+        else:
+            return "Saldo insuficiente."
+
+conta = ContaBancaria(1000, 'Breno Leal')
+
+print(conta.depositar(500))
+
+print(conta.sacar(200))
+
+print(conta.sacar(10000))

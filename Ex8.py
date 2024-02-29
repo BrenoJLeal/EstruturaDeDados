@@ -1,14 +1,19 @@
-def primo(numero):
-    if numero < 2:
-        return False
-    for i in range(2, int(numero**0.5) + 1):
-        if numero % i == 0:
-            return False
-    return True
+class Aluno:
+    def __init__(self, nome, notas=None):
+        self.nome = nome
+        self.notas = notas if notas is not None else []
 
-numero = int(input("Digite um número: "))
+    def calcular_media(self):
+        if not self.notas:
+            n1 = float(input("Digite a primeira nota: "))
+            n2 = float(input("Digite a segunda nota: "))
+            n3 = float(input("Digite a terceira nota: "))
+            self.notas = [n1, n2, n3]
 
-if primo(numero):
-    print(f"{numero} é um número primo.")
-else:
-    print(f"{numero} não é um número primo.")
+        media = sum(self.notas) / len(self.notas)
+        return media
+
+
+# Example usage:
+aluno = Aluno('Breno')
+print(aluno.calcular_media())

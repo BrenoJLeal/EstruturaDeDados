@@ -1,5 +1,9 @@
-num = int(input("Digite um número: "))
+class Retangulo:
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+    def calcular_area(self):
+        return self.base * self.altura
 
-print(f"Números pares de 0 até {num}:")
-for i in range(0, num + 1, 2):
-    print(i)
+calc = Retangulo(5,5)
+print(calc.calcular_area())

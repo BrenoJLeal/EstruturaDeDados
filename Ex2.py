@@ -1,6 +1,8 @@
-n = int(input(f"Digite um número: "))
-
-if n % 2 == 0:
-    print(f"O número {n} é par!")
-else:
-    print(f"O número {n} é impar!")
+class Livro:
+    def __init__(self, titulo, autor):
+        self.titulo = titulo
+        self.autor = autor
+    def detalhes(self):
+        return f"Título: {self.titulo}, Autor: {self.autor}"
+info = Livro('Cleancode','Robert Cecil' )
+print(info.detalhes())

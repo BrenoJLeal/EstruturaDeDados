@@ -1,9 +1,10 @@
-n = 3
-notas = []
-for i in range(n):
-    nota = float(input("Digite um valor: "))
-    notas.append(nota)
 
-media = sum(notas)/n
+class Circulo:
+    def __init__(self, raio):
+        self.raio = raio
+    def calcular_area(self):
+        return 3.14 * (self.raio ** 2)
 
-print(f"A mádia dos valores é: {media}")
+area = Circulo(5)
+
+print(area.calcular_area())

@@ -1,11 +1,9 @@
-nomes = []
-a = []
-for nome in range(4):
-    nome = str(input('Digite um nome: '))
-    nomes.append(nome)
-
-for nome in nomes:
-    if nome[0].upper() == 'A':
-        a.append(nome)
-print(f'Os nomes que começam com A são: {a}')
-
+class Triangulo:
+    def __init__(self, lado1, lado2, lado3):
+        self.lado1 = lado1
+        self.lado2 = lado2
+        self.lado3 = lado3
+    def calcular_perimetro(self):
+        return self.lado1 + self.lado2 + self.lado3
+p = Triangulo(4,4,4)
+print(p.calcular_perimetro())
