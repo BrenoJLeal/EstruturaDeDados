@@ -1,4 +1,8 @@
-lista1 = range(1,10 + 1)
+lista1 = [1,2,3,4,9]
+lista2 = [1,9,5]
+listaC = []
 
-for i in range(len(lista1)):
-    print(lista1[i])
+for n in lista1:
+    if n in lista2:
+        listaC.append(n)
+print(listaC)
